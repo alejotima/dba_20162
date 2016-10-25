@@ -2,7 +2,7 @@ var app = angular.module('myApp', ['ngRoute']);
 app.config(function ($routeProvider) {
     $routeProvider
     .when('/home', {
-        templateUrl: '/static/home.html'
+        templateUrl: 'localhost:5000/static/home.html'
     })
     .when('/test', {
         templateUrl: '/static/home.html'
