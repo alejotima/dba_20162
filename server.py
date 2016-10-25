@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify
 import cx_Oracle
 import os
 
-app= Flask(__name__)
+app= Flask(__name__, static_url_path='/static')
 
 @app.route('/api/users', methods=["GET"])
 def get_all_users():
@@ -33,6 +33,7 @@ def delete_user(id):
 @app.route ('/')
 def home():
 	return render_template('index.html')
+
 
 if __name__=="__main__":
 	conn = cx_Oracle.connect('sys', '12345678', 'localhost:1521/orcl', mode = cx_Oracle.SYSDBA)
