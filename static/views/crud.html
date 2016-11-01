@@ -1,0 +1,26 @@
+<h1>CRUD</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A tempore, ab architecto consequuntur officia hic velit sequi quos. Officiis tenetur veritatis voluptatum cupiditate ab nihil natus eius deleniti, deserunt adipisci?</p>
+
+
+<div ng-controller="CrudCtrl">
+    <h2>{{test}}</h2>
+    <div class="page-header">
+        <input type="text" placeholder="Ingrese el nombre" ng-model="name">
+        <input type="text" placeholder="Ingrese el apellido" ng-model="lastname">
+        <button ng-click="addUser()">Agregar</button>
+    </div>
+    <div style="border: 1px solid; padding: 20px;">
+        <ul>
+            <li ng-repeat="obj in users" class="lista">
+                <div class="item">{{obj.name}}</div>
+                <div class="item">{{obj.lastname}}</div>
+                <div class="item">
+                    <a ng-click="removeUser(obj.id)">
+                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>

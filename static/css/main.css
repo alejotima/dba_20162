@@ -1,0 +1,9 @@
+.lista {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.item {
+    width: 100px;
+}
